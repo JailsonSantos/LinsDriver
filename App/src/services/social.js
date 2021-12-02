@@ -1,12 +1,7 @@
-import OAuthManager from 'react-native-social-login';
+import axios from 'axios';
 
-const social = new OAuthManager('linsdriver');
-
-social.configure({
-  facebook: {
-    client_id: 'xxx',
-    client_secret: 'xxx'
-  },
+const graph = axios.create({
+  baseURL: 'https://graph.facebook.com/v9.0',
 });
 
-export default social;
+export default graph;
